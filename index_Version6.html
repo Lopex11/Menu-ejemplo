@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cuchara Moderna - Menú Disruptivo</title>
+    <!-- Incluyendo la librería de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Fondo oscuro y dramático */
+            color: #e0e0e0;
+        }
+        .menu-grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .menu-grid-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .menu-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+        .menu-grid-item:hover img {
+            transform: scale(1.1);
+        }
+        .item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+            padding: 1.5rem;
+            color: white;
+        }
+        .item-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .item-description {
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+        .item-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fca5a5; /* Un color de acento vibrante */
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="w-full max-w-5xl mx-auto py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-extralight text-white tracking-widest">LA CUCHARA MODERNA</h1>
+            <p class="text-lg text-gray-400 mt-4 font-light">Experiencia gastronómica elevada</p>
+        </header>
+
+        <!-- Menu sections with a responsive grid layout -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-light text-gray-300 mb-8 border-b border-gray-700 pb-4">Entrantes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Burrata salad -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Ensalada+de+Burrata+con+Pesto" loading="lazy" alt="Ensalada de burrata con pesto" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Ensalada de burrata</h3>
+                            <span class="item-price">6,50 €</span>
+                        </div>
+                        <p class="item-description">Una burrata fresca sobre rúcula con pesto y tomates cherry, presentada con un toque moderno.</p>
+                    </div>
+                </div>
+                <!-- Ham croquettes -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Croquetas+de+Jamon+Iberico" loading="lazy" alt="Croquetas caseras de jamón" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Croquetas caseras</h3>
+                            <span class="item-price">6,00 €</span>
+                        </div>
+                        <p class="item-description">Nuestras famosas croquetas de jamón ibérico, redefinidas para una experiencia única.</p>
+                    </div>
+                </div>
+                <!-- Andalusian gazpacho -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Gazpacho+Andaluz+Deconstruido" loading="lazy" alt="Gazpacho andaluz" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Gazpacho deconstruido</h3>
+                            <span class="item-price">5,00 €</span>
+                        </div>
+                        <p class="item-description">Una versión innovadora de la sopa fría tradicional, con un toque inesperado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-light text-gray-300 mb-8 border-b border-gray-700 pb-4">Platos Principales</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Vegetable lasagna -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Lasagna+de+Verduras+Moderna" loading="lazy" alt="Lasaña de verduras" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Lasaña de verduras</h3>
+                            <span class="item-price">10,00 €</span>
+                        </div>
+                        <p class="item-description">Un plato clásico reinventado con capas y texturas sorprendentes.</p>
+                    </div>
+                </div>
+                <!-- Chicken curry -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Pollo+al+Curry+con+Arroz+Basmati" loading="lazy" alt="Pollo al curry" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Pollo al curry</h3>
+                            <span class="item-price">11,50 €</span>
+                        </div>
+                        <p class="item-description">Pollo tierno en una salsa cremosa de curry con un giro inesperado, servido con arroz basmati.</p>
+                    </div>
+                </div>
+                <!-- Grilled steak -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Entrecot+a+la+Brasa+Gourmet" loading="lazy" alt="Entrecot a la brasa" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Entrecot a la brasa</h3>
+                            <span class="item-price">14,50 €</span>
+                        </div>
+                        <p class="item-description">Un clásico de la brasa con una presentación de vanguardia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-light text-gray-300 mb-8 border-b border-gray-700 pb-4">Postres</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Tiramisu -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Tiramisu+Deconstruido+Minimalista" loading="lazy" alt="Tiramisú casero" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Tiramisú deconstruido</h3>
+                            <span class="item-price">4,50 €</span>
+                        </div>
+                        <p class="item-description">El sabor clásico del tiramisú en un formato moderno y sorprendente.</p>
+                    </div>
+                </div>
+                <!-- Cheesecake -->
+                <div class="menu-grid-item">
+                    <img src="https://placehold.co/400x320/222222/e0e0e0?text=Tarta+de+Queso+Moderna" loading="lazy" alt="Tarta de queso al horno" class="w-full h-80">
+                    <div class="item-overlay flex flex-col justify-end h-full">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="item-title">Tarta de queso</h3>
+                            <span class="item-price">4,00 €</span>
+                        </div>
+                        <p class="item-description">La cremosidad de nuestra tarta de queso con una presentación elegante y disruptiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverages section -->
+        <section>
+            <h2 class="text-3xl font-light text-gray-300 mb-8 border-b border-gray-700 pb-4">Bebidas</h2>
+            <ul class="space-y-4 text-gray-400 text-lg">
+                <li class="flex items-center justify-between">
+                    <span class="font-medium">Agua</span>
+                    <span class="flex-grow border-b border-dashed border-gray-600 mx-4"></span>
+                    <span class="font-bold text-white">1,50 €</span>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span class="font-medium">Refrescos</span>
+                    <span class="flex-grow border-b border-dashed border-gray-600 mx-4"></span>
+                    <span class="font-bold text-white">2,00 €</span>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span class="font-medium">Cerveza</span>
+                    <span class="flex-grow border-b border-dashed border-gray-600 mx-4"></span>
+                    <span class="font-bold text-white">2,50 €</span>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span class="font-medium">Copa de vino</span>
+                    <span class="flex-grow border-b border-dashed border-gray-600 mx-4"></span>
+                    <span class="font-bold text-white">3,00 €</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
